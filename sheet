@@ -1,0 +1,5 @@
+git clone http://code.03c8.net:3000/epsylon/ufonet
+python setup.py install
+./ufonet --version
+git clone https://github.com/smythtech/mininet_pcap_replay.git
+https://aseados.ucd.ie/datasets/SDN/InSDN_PCAPS_Groups/
