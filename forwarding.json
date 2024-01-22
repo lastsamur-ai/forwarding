@@ -402,7 +402,7 @@
         "column" : 8,
         "source_fragment" : "MyIngress"
       },
-      "init_table" : "node_2",
+      "init_table" : "MyIngress.ipv4_lpm",
       "tables" : [
         {
           "name" : "MyIngress.ipv4_lpm",
@@ -444,31 +444,7 @@
         }
       ],
       "action_profiles" : [],
-      "conditionals" : [
-        {
-          "name" : "node_2",
-          "id" : 0,
-          "source_info" : {
-            "filename" : "/home/user/Desktop/forwarding/forwarding.p4",
-            "line" : 128,
-            "column" : 12,
-            "source_fragment" : "hdr.ipv4.isValid()"
-          },
-          "expression" : {
-            "type" : "expression",
-            "value" : {
-              "op" : "d2b",
-              "left" : null,
-              "right" : {
-                "type" : "field",
-                "value" : ["ipv4", "$valid$"]
-              }
-            }
-          },
-          "false_next" : null,
-          "true_next" : "MyIngress.ipv4_lpm"
-        }
-      ]
+      "conditionals" : []
     },
     {
       "name" : "egress",

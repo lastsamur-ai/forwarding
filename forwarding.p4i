@@ -1008,10 +1008,10 @@ control MyIngress(inout headers hdr,
     apply {
 
         //only if IPV4 the rule is applied. Therefore other packets will not be forwarded.
-        if (hdr.ipv4.isValid()){
+        //if (hdr.ipv4.isValid()){
             ipv4_lpm.apply();
 
-        }
+        //}
     }
 }
 
