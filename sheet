@@ -1,5 +1,12 @@
+install ufonet dependencies using apt-get
 git clone http://code.03c8.net:3000/epsylon/ufonet
 python setup.py install
+go to ufonet/core/main.py
+add this code after line 102
+self.wwa = '/home/user/Desktop/forwarding/ufonet/'#where we at with the installation
+        l=['mothershipname']
+        for v in self.__dict__:
+            if 'file' in v or v in l:
+                self.__dict__[v]=self.wwa+self.__dict__[v]
 ./ufonet --version
-git clone https://github.com/smythtech/mininet_pcap_replay.git
 https://aseados.ucd.ie/datasets/SDN/InSDN_PCAPS_Groups/
