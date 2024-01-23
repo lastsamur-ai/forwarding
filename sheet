@@ -14,5 +14,14 @@ self.wwa = '/home/user/Desktop/forwarding/ufonet/'#where we at with the installa
         for v in self.__dict__:
             if 'file' in v or v in l:
                 self.__dict__[v]=self.wwa+self.__dict__[v]
+also go to main.py about line 352 and change those lines to the following
+self.wwa = '/home/user/Workspace/forwarding/ufonet/'
+if not os.path.exists(self.wwa+"core/json/"): # create gui json cfg files folder
+    os.mkdir(self.wwa+"core/json/")
 ./ufonet --version
 https://aseados.ucd.ie/datasets/SDN/InSDN_PCAPS_Groups/
+
+under h2(target), python3 -m http.server 80
+under h3(zombie), python3 fake_redirect.py
+under zombies file(service with an open redirect vuln): http:10.0.3.3:8080?uri=
+This should give a basic working scenario

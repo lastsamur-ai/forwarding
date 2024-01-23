@@ -11,7 +11,7 @@ Normal_Group/Normal_8/Normal-h3_9.pcap
 ...
 Normal_Group/Normal_11/Normal-h3_12.pcap
 '''
-traffic=sniff(offline="/home/user/Desktop/forwarding/Normal_Group/Normal_1/Normal-h3_1.pcap",filter="ip dst host 192.168.20.133")
+'''traffic=sniff(offline="/home/user/Desktop/forwarding/Normal_Group/Normal_1/Normal-h3_1.pcap",filter="ip dst host 192.168.20.133")
 
 for pkt in traffic:
 	pkt.getlayer(IP).src='10.0.1.1'
@@ -21,6 +21,6 @@ for pkt in traffic:
 	pkt.sport=443
 	pkt.dport=6789
 
-sendp(traffic[0:10],iface='h1-eth0')
+sendp(traffic[0:10],iface='h1-eth0')'''
 #os.system('./ufonet/ufonet -a 10.0.0.1 -t 10.0.0.4 --tachyon=TACHYON 101')
-#os.system('./ufonet/ufonet -a "10.0.0.1" -t 10.0.0.4 --tachyon "TACHYON 101"')
+os.system('./ufonet/ufonet -a http://10.0.2.2 ')
