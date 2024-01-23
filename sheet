@@ -25,3 +25,4 @@ under h2(target), python3 -m http.server 80
 under h3(zombie), python3 fake_redirect.py
 under zombies file(service with an open redirect vuln): http:10.0.3.3:8080?uri=
 This should give a basic working scenario
+how to run a dns server and launch DNS Amplification (TACHYON)
